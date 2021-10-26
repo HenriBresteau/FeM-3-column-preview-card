@@ -2,13 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap");
 body {
   font-size: 15px;
-  font-family: "Big Shoulders Display", cursive;
+
   font-family: "Lexend Deca", sans-serif;
   --orange: hsl(31, 77%, 52%);
   --D-cyan: hsl(184, 100%, 22%);
   --VD-cyan: hsl(179, 100%, 13%);
   --white-p: hsla(0, 0%, 100%, 0.75);
   --gray: hsl(0, 0%, 95%);
+  background-color: var(--gray);
 }
 
 /* footer */
@@ -19,4 +20,61 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.container {
+  margin: 2rem auto;
+  width: 300px;
+}
+.card {
+  padding: 32px;
+}
+.cardTitle {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.cardText {
+  color: var(--white-p);
+  line-height: 1.5;
+}
+.cardBtn {
+  padding: 12px 32px;
+  background-color: var(--white-p);
+  width: fit-content;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.cardBtn:hover {
+  background-color: var(--gray);
+  transform: translateX(5px);
+}
+.cardBtn a {
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.cardBtn:hover a {
+  filter: brightness(0.8);
+}
+#sedans {
+  background-color: var(--orange);
+  border-radius: 10px 10px 0 0;
+}
+#sedans a {
+  color: var(--orange);
+}
+#suvs {
+  background-color: var(--D-cyan);
+}
+#suvs a {
+  color: var(--D-cyan);
+}
+#luxury {
+  background-color: var(--VD-cyan);
+  border-radius: 0 0 10px 10px;
+}
+#luxury a {
+  color: var(--VD-cyan);
 }
