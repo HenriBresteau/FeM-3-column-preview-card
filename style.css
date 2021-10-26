@@ -46,18 +46,18 @@ body {
   width: fit-content;
   border-radius: 20px;
   transition: all 0.3s;
+  border: 1px solid transparent;
 }
 .cardBtn:hover {
-  background-color: var(--gray);
+  background-color: transparent;
+  border: 1px solid var(--white-p);
   transform: translateX(5px);
 }
 .cardBtn a {
   text-decoration: none;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
-.cardBtn:hover a {
-  filter: brightness(0.8);
-}
+
 #sedans {
   background-color: var(--orange);
   border-radius: 10px 10px 0 0;
@@ -65,11 +65,17 @@ body {
 #sedans a {
   color: var(--orange);
 }
+#sedans .cardBtn:hover a {
+  color: var(--white-p);
+}
 #suvs {
   background-color: var(--D-cyan);
 }
 #suvs a {
   color: var(--D-cyan);
+}
+#suvs .cardBtn:hover a {
+  color: var(--white-p);
 }
 #luxury {
   background-color: var(--VD-cyan);
@@ -77,4 +83,25 @@ body {
 }
 #luxury a {
   color: var(--VD-cyan);
+}
+#luxury .cardBtn:hover a {
+  color: var(--white-p);
+}
+@media (min-width: 1425px) {
+  .container {
+    display: flex;
+    width: 850px;
+  }
+  .card {
+    padding: 48px 54px;
+  }
+  #sedans {
+    border-radius: 10px 0 0 10px;
+  }
+  #luxury {
+    border-radius: 0 10px 10px 0;
+  }
+  .cardBtn {
+    margin-top: 64px;
+  }
 }
